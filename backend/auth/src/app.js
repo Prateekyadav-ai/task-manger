@@ -33,7 +33,7 @@ app.use(express.static(frontendPath));
 const authRouter = require('./routes/auth.routes');
 
 app.use('/api/auth', authRouter);
-app.use('/api/projects', require('./routes/projectRoutes'));
+app.use('/api/projects', require('./routes/ProjectRoutes'));
 app.use('/api/tasks', require('./routes/taskRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/admin/users', require('./routes/adminRoutes'));
