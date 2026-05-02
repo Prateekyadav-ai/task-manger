@@ -39,7 +39,7 @@ app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/admin/users', require('./routes/adminRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
 
-app.get('*', (req, res) => {
+app.get(/.*/,  (req, res) => {
   res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
